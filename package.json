@@ -2,7 +2,7 @@
   "name": "react-circle-flags",
   "version": "0.0.3",
   "description": "React circle flags (based on circle-flags repo)",
-  "author": "tnovau",
+  "author": "Tomás Novau(tnovau@gmail.com)",
   "license": "MIT",
   "repository": "tnovau/react-circle-flags",
   "main": "dist/index.js",
