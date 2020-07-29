@@ -12,15 +12,15 @@
     "node": ">=10"
   },
   "scripts": {
-    "ci": "yarn lint && yarn build:test",
+    "ci": "npm run lint && npm run build:test",
     "build": "microbundle-crl --no-compress --format modern,cjs",
-    "build:test": "yarn build",
+    "build:test": "npm run build",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "lint": "eslint .",
-    "predeploy": "cd example && yarn install && yarn run build",
+    "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
