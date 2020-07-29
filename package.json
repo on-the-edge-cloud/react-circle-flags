@@ -1,6 +1,6 @@
 {
   "name": "react-circle-flags",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React circle flags (based on circle-flags repo)",
   "author": "tnovau",
   "license": "MIT",
@@ -50,5 +50,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "keywords:" ["react", "javascript", "npm", "component", "reactjs", "react-component", "react-components", "javascript-library", "flags", "countries", "react-component-library"]
 }
