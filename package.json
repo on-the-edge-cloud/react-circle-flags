@@ -12,6 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "ci": "echo \"TODO\"",
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
