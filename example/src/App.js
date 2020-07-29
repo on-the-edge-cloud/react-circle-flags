@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { CircleFlag } from 'react-circle-flags'
 
 const App = () =>

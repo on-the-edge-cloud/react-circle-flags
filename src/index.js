@@ -8,7 +8,7 @@ const DEFAULT_HEIGHT = 100
 
 /**
  * @param {string} countryCode
- * @param {import('react').SVGProps<SVGSVGElement>} otherProps
+ * @param {React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>} otherProps
  */
 const getSvgProps = (countryCode, otherProps) => ({
   ...otherProps,
@@ -18,10 +18,11 @@ const getSvgProps = (countryCode, otherProps) => ({
 })
 
 /**
- * @param {import('react').SVGProps<SVGSVGElement> & {countryCode: string}} param0
+ * @param {React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {countryCode: string}} param0
  */
 export const CircleFlag = ({ countryCode, ...otherProps }) => (
   <img
+    data-testid='circle-country-flag'
     {...getSvgProps(
       (countryCode || DEFAULT_COUNTRY_CODE).toLowerCase(),
       otherProps
