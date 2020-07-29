@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { CircleFlag } from '.'
 
-describe('ExampleComponent', () => {
+describe('CircleFlag', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(CircleFlag).toBeTruthy()
   })
 })

@@ -52,5 +52,17 @@
   "files": [
     "dist"
   ],
-  "keywords:" ["react", "javascript", "npm", "component", "reactjs", "react-component", "react-components", "javascript-library", "flags", "countries", "react-component-library"]
+  "keywords": [
+    "react",
+    "javascript",
+    "npm",
+    "component",
+    "reactjs",
+    "react-component",
+    "react-components",
+    "javascript-library",
+    "flags",
+    "countries",
+    "react-component-library"
+  ]
 }
