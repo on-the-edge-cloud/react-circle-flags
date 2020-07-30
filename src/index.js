@@ -23,9 +23,6 @@ const getSvgProps = (countryCode, otherProps) => ({
 export const CircleFlag = ({ countryCode, ...otherProps }) => (
   <img
     data-testid='circle-country-flag'
-    {...getSvgProps(
-      (countryCode || UNKNOWN_FLAG).toLowerCase(),
-      otherProps
-    )}
+    {...getSvgProps((countryCode || UNKNOWN_FLAG).toLowerCase(), otherProps)}
   />
 )
