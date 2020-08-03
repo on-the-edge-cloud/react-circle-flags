@@ -52,4 +52,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: docs/.docz/build
+        FOLDER: docs/.docz/dist
