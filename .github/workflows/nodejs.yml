@@ -41,6 +41,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12
+    - run: npm i
+    - run: npm run build
     - run: yarn
       working-directory: ./docs
     - run: yarn build
