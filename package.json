@@ -19,9 +19,7 @@
     "prepare": "npm run build",
     "test": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
     "test:watch": "react-scripts test --env=jsdom",
-    "lint": "eslint src/**/*.js",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "lint": "eslint src/**/*.js"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -45,7 +43,6 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-standard": "^4.0.1",
-    "gh-pages": "^2.2.0",
     "microbundle-crl": "^0.13.10",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
