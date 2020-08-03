@@ -13,7 +13,7 @@ npm install --save react-circle-flags
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 import { CircleFlag } from 'react-circle-flags'
 
 export const SpanishFlag = () => <CircleFlag country="es" height="35" />
