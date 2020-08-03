@@ -30,3 +30,24 @@ jobs:
         path: ./coverage
     - name: Codecov
       uses: codecov/codecov-action@v1.0.6
+
+  gh_pages_deploy:
+
+    runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+        working-directory: ./docs
+      - run: yarn build
+        working-directory: ./docs
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: docs/.docz/build
