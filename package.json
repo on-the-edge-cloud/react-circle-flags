@@ -1,6 +1,6 @@
 {
   "name": "react-circle-flags",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A React component with a collection of 300+ minimal circular SVG country flags",
   "author": "Tomás Novau(tnovau@gmail.com)",
   "license": "MIT",
@@ -11,10 +11,10 @@
   "engines": {
     "node": ">=10"
   },
-  "types": "react-circle-flags.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "ci": "npm run lint && npm run build:test",
-    "build": "microbundle-crl --compress --no-sourcemap --format modern,cjs",
+    "build": "microbundle-crl --compress --no-sourcemap --format modern,cjs && shx cp index.d.ts dist/index.d.ts",
     "build:test": "npm run build",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "npm run build",
@@ -49,7 +49,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "shx": "^0.3.2"
   },
   "files": [
     "dist"
