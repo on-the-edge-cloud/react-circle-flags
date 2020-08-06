@@ -1,10 +1,6 @@
 {
   "name": "react-circle-flags",
-<<<<<<< HEAD
   "version": "0.0.9",
-=======
-  "version": "0.0.8",
->>>>>>> master
   "description": "A React component with a collection of 300+ minimal circular SVG country flags",
   "author": "Tomás Novau(tnovau@gmail.com)",
   "license": "MIT",
