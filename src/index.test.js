@@ -26,4 +26,17 @@ describe('CircleFlag', () => {
     expect(countryFlag.title).toBe('Spain')
     expect(countryFlag.getAttribute('height')).toBe('35')
   })
+
+  it('should render UNKNOWN_FLAG if the countryCode is not in countries', () => {
+    const { getByTestId } = render(
+      <CircleFlag countryCode='Argentina' height='35' />
+    )
+    const countryFlag = getByTestId('circle-country-flag')
+    expect(countryFlag).toBeInTheDocument()
+    expect(countryFlag.getAttribute('src')).toBe(
+      'https://hatscripts.github.io/circle-flags/flags/xx.svg'
+    )
+    expect(countryFlag.title).toBe('xx')
+    expect(countryFlag.getAttribute('height')).toBe('35')
+  })
 })

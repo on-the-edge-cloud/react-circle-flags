@@ -1,4 +1,5 @@
 import React from 'react'
+import countries from './countries'
 
 const CDN_URL = 'https://hatscripts.github.io/circle-flags/flags/'
 const FILE_SUFFIX = 'svg'
@@ -18,11 +19,19 @@ const getSvgProps = (countryCode, otherProps) => ({
 })
 
 /**
+ * @param {string} countryCode
+ */
+const parseCountryCode = (countryCode) =>
+  countries[countryCode] ? countryCode : UNKNOWN_FLAG
+
+/**
  * @param {import('../react-circle-flags').CircleFlagProps} param0
  */
 export const CircleFlag = ({ countryCode, ...otherProps }) => (
   <img
     data-testid='circle-country-flag'
-    {...getSvgProps((countryCode || UNKNOWN_FLAG).toLowerCase(), otherProps)}
+    {...getSvgProps(parseCountryCode(countryCode).toLowerCase(), otherProps)}
   />
 )
+
+export { countries }
