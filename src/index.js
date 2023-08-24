@@ -11,7 +11,7 @@ const DEFAULT_HEIGHT = 100
 /**
  * @param {string} code
  * @param {string} cdnUrl
- * @param {Omit<import('../index').CircleFlagProps, "countryCode" | "cdnUrl">} otherProps
+ * @param {DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>} otherProps
  * @param {string} cdnSuffix
  */
 const getSvgProps = (code, cdnUrl, otherProps, cdnSuffix = '') => ({
