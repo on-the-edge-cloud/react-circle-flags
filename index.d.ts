@@ -1,14 +1,31 @@
-import { DetailedHTMLProps, ImgHTMLAttributes } from "react";
+import { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 
-interface CircleFlagProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
+interface CircleFlagProps extends DetailedHTMLProps<
+  ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+> {
   /**
    * Country code of flag.
    */
-  countryCode: string;
+  countryCode: string
   /**
    * Custom CDN URL to use.
    */
-  cdnUrl?: string;
+  cdnUrl?: string
+}
+
+interface CircleFlagLanguageProps extends DetailedHTMLProps<
+  ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+> {
+  /**
+   * Language code of flag.
+   */
+  languageCode: string
+  /**
+   * Custom CDN URL to use.
+   */
+  cdnUrl?: string
 }
 
 /**
@@ -19,9 +36,10 @@ interface CircleFlagProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageE
  * Docs:
  * - https://tnovau.github.io/react-circle-flags/
  */
-declare function CircleFlag(props: CircleFlagProps): JSX.Element;
+declare function CircleFlag(props: CircleFlagProps): JSX.Element
+declare function CircleFlagLanguage(props: CircleFlagLanguageProps): JSX.Element
 
-declare var countries: Record<string, boolean>;
+declare var countries: Record<string, boolean>
+declare var languages: Record<string, boolean>
 
-export { CircleFlag, CircleFlagProps, countries }
-
+export { CircleFlag, CircleFlagProps, countries, languages }
