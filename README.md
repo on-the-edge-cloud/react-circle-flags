@@ -30,6 +30,15 @@ export const SpanishFlag = () => <CircleFlag countryCode="es" height="35" cdnUrl
 
 You can pass all the react's `React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>` props to CircleFlag. :rocket:
 
+### Language flags
+
+```jsx
+import React from 'react'
+import { CircleFlagLanguage } from 'react-circle-flags'
+
+export const EnglishFlag = () => <CircleFlagLanguage countryCode="en-us" height="35" />
+```
+
 ## Docs && Gallery
 
 Click [here](https://tnovau.github.io/react-circle-flags/)!
