@@ -36,7 +36,7 @@ You can pass all the react's `React.DetailedHTMLProps<React.ImgHTMLAttributes<HT
 import React from 'react'
 import { CircleFlagLanguage } from 'react-circle-flags'
 
-export const EnglishFlag = () => <CircleFlagLanguage countryCode="en-us" height="35" />
+export const EnglishFlag = () => <CircleFlagLanguage languageCode="en-us" height="35" />
 ```
 
 ## Docs && Gallery
