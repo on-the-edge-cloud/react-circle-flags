@@ -15,18 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js 18
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: 18
     - run: npm i
     - run: npm run ci
     - run: npm test
     - name: Upload coverage
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: code_coverage
         path: ./coverage
     - name: Codecov
-      uses: codecov/codecov-action@v1.0.6
+      uses: codecov/codecov-action@v4
