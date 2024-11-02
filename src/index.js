@@ -2,7 +2,7 @@ import React from 'react'
 import countries from './countries'
 import languages from './languages'
 
-const CDN_URL = 'https://hatscripts.github.io/circle-flags/flags/'
+const CDN_URL = 'https://react-circle-flags.pages.dev/'
 const FILE_SUFFIX = 'svg'
 
 const UNKNOWN_FLAG = 'xx'
