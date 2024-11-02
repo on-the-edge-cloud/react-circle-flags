@@ -387,7 +387,10 @@ export const Gallery = () => (
   <>
     {Object.keys(countryMap).map((countryCode) => (
       <Item key={countryCode}>
-        <CircleFlag countryCode={countryCode} />
+        <CircleFlag
+          countryCode={countryCode}
+          cdnUrl='https://react-circle-flags.pages.dev/'
+        />
         <p>
           {countryMap[countryCode]} (<span>{countryCode.toUpperCase()}</span>)
         </p>
