@@ -8,7 +8,7 @@ describe('CircleFlag', () => {
     const countryFlag = getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
-      'https://hatscripts.github.io/circle-flags/flags/xx.svg'
+      'https://react-circle-flags.pages.dev/xx.svg'
     )
     expect(countryFlag.title).toBe('xx')
     expect(countryFlag.getAttribute('height')).toBe('100')
@@ -21,7 +21,7 @@ describe('CircleFlag', () => {
     const countryFlag = getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
-      'https://hatscripts.github.io/circle-flags/flags/es.svg'
+      'https://react-circle-flags.pages.dev/es.svg'
     )
     expect(countryFlag.title).toBe('Spain')
     expect(countryFlag.getAttribute('height')).toBe('35')
@@ -50,7 +50,7 @@ describe('CircleFlag', () => {
     const countryFlag = getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
-      'https://hatscripts.github.io/circle-flags/flags/xx.svg'
+      'https://react-circle-flags.pages.dev/xx.svg'
     )
     expect(countryFlag.title).toBe('xx')
     expect(countryFlag.getAttribute('height')).toBe('35')
@@ -63,7 +63,7 @@ describe('CircleFlagLanguage', () => {
     const languageFlag = getByTestId('circle-language-flag')
     expect(languageFlag).toBeInTheDocument()
     expect(languageFlag.getAttribute('src')).toBe(
-      'https://hatscripts.github.io/circle-flags/flags/language/xx.svg'
+      'https://react-circle-flags.pages.dev/language/xx.svg'
     )
     expect(languageFlag.title).toBe('xx')
     expect(languageFlag.getAttribute('height')).toBe('100')
@@ -80,7 +80,7 @@ describe('CircleFlagLanguage', () => {
     const languageFlag = getByTestId('circle-language-flag')
     expect(languageFlag).toBeInTheDocument()
     expect(languageFlag.getAttribute('src')).toBe(
-      'https://hatscripts.github.io/circle-flags/flags/language/en-us.svg'
+      'https://react-circle-flags.pages.dev/language/en-us.svg'
     )
     expect(languageFlag.title).toBe('United States')
     expect(languageFlag.getAttribute('height')).toBe('35')
