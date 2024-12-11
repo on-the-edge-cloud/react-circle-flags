@@ -2,7 +2,7 @@
 
 > React circle flags (based on [circle-flags](https://github.com/HatScripts/circle-flags))
 
-[![NPM](https://img.shields.io/npm/v/react-circle-flags.svg)](https://www.npmjs.com/package/react-circle-flags) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![codecov](https://codecov.io/gh/tnovau/react-circle-flags/branch/master/graph/badge.svg)](https://codecov.io/gh/tnovau/react-circle-flags) ![Node.js CI](https://github.com/tnovau/react-circle-flags/workflows/Node.js%20CI/badge.svg)
+[![NPM](https://img.shields.io/npm/v/react-circle-flags.svg)](https://www.npmjs.com/package/react-circle-flags) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![codecov](https://codecov.io/gh/on-the-edge-cloud/react-circle-flags/branch/master/graph/badge.svg)](https://codecov.io/gh/on-the-edge-cloud/react-circle-flags) ![Node.js CI](https://github.com/on-the-edge-cloud/react-circle-flags/workflows/Node.js%20CI/badge.svg)
 
 ## Install
 
@@ -41,7 +41,7 @@ export const EnglishFlag = () => <CircleFlagLanguage languageCode="en-us" height
 
 ## Docs && Gallery
 
-Click [here]([https://tnovau.github.io/react-circle-flags/](https://on-the-edge-cloud.github.io/react-circle-flags/))!
+Click [here]([https://on-the-edge-cloud.github.io/react-circle-flags/](https://on-the-edge-cloud.github.io/react-circle-flags/))!
 
 ## License
 

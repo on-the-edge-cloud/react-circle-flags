@@ -31,10 +31,10 @@ interface CircleFlagLanguageProps extends DetailedHTMLProps<
 /**
  *
  * Demos:
- * - https://tnovau.github.io/react-circle-flags/gallery
+ * - https://on-the-edge-cloud.github.io/react-circle-flags/gallery
  *
  * Docs:
- * - https://tnovau.github.io/react-circle-flags/
+ * - https://on-the-edge-cloud.github.io/react-circle-flags/
  */
 declare function CircleFlag(props: CircleFlagProps): JSX.Element
 declare function CircleFlagLanguage(props: CircleFlagLanguageProps): JSX.Element
