@@ -45,4 +45,4 @@ Click [here]([https://tnovau.github.io/react-circle-flags/](https://on-the-edge-
 
 ## License
 
-MIT © [tnovau](https://github.com/on-the-edge-cloud)
+MIT © [On The Edge IT Solutions](https://github.com/on-the-edge-cloud)
