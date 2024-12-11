@@ -41,8 +41,8 @@ export const EnglishFlag = () => <CircleFlagLanguage languageCode="en-us" height
 
 ## Docs && Gallery
 
-Click [here](https://tnovau.github.io/react-circle-flags/)!
+Click [here]([https://tnovau.github.io/react-circle-flags/](https://on-the-edge-cloud.github.io/react-circle-flags/))!
 
 ## License
 
-MIT © [tnovau](https://github.com/tnovau)
+MIT © [tnovau](https://github.com/on-the-edge-cloud)
