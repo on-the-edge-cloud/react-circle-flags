@@ -33,7 +33,7 @@ export const Gallery = () => (
           cdnUrl='https://react-circle-flags.pages.dev/'
         />
         <p>
-          {countryMap[countryCode]} (<span>{countryCode.toUpperCase()}</span>)
+          <span>{countryCode.toUpperCase()}</span>
         </p>
       </Item>
     ))}
