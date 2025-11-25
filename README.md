@@ -16,7 +16,7 @@ npm install --save react-circle-flags
 import React from 'react'
 import { CircleFlag } from 'react-circle-flags'
 
-export const SpanishFlag = () => <CircleFlag countryCode="es" height="35" />
+export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" />
 ```
 
 ### With custom CDN
@@ -25,7 +25,7 @@ export const SpanishFlag = () => <CircleFlag countryCode="es" height="35" />
 import React from 'react'
 import { CircleFlag } from 'react-circle-flags'
 
-export const SpanishFlag = () => <CircleFlag countryCode="es" height="35" cdnUrl="https://magic-cdn.com/flags/" />
+export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
 ```
 
 You can pass all the react's `React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>` props to CircleFlag. :rocket:

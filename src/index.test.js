@@ -16,30 +16,30 @@ describe('CircleFlag', () => {
 
   it('should render correctly with props', () => {
     const { getByTestId } = render(
-      <CircleFlag countryCode='es' height='35' title='Spain' />
+      <CircleFlag countryCode='ar' height='35' title='Argentina' />
     )
     const countryFlag = getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
-      'https://react-circle-flags.pages.dev/es.svg'
+      'https://react-circle-flags.pages.dev/ar.svg'
     )
-    expect(countryFlag.title).toBe('Spain')
+    expect(countryFlag.title).toBe('Argentina')
     expect(countryFlag.getAttribute('height')).toBe('35')
   })
 
   it('should render correctly with cdnUrl parameter', () => {
     const { getByTestId } = render(
       <CircleFlag
-        countryCode='es'
+        countryCode='ar'
         height='35'
-        title='Spain'
+        title='Argentina'
         cdnUrl='https://magic-cdn.com/flags/'
       />
     )
     const countryFlag = getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
-      'https://magic-cdn.com/flags/es.svg'
+      'https://magic-cdn.com/flags/ar.svg'
     )
   })
 
