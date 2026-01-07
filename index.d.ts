@@ -42,4 +42,4 @@ declare function CircleFlagLanguage(props: CircleFlagLanguageProps): JSX.Element
 declare var countries: Record<string, boolean>
 declare var languages: Record<string, boolean>
 
-export { CircleFlag, CircleFlagLanguage, CircleFlagProps, countries, languages }
+export { CircleFlag, CircleFlagLanguage, CircleFlagProps, CircleFlagLanguageProps, countries, languages }
