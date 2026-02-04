@@ -28,6 +28,15 @@ import { CircleFlag } from 'react-circle-flags'
 export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
 ```
 
+### With inline svgs instead of using images
+
+```jsx
+import React from 'react'
+import { CircleFlag } from 'react-circle-flags'
+
+export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
+```
+
 You can pass all the react's `React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>` props to CircleFlag. :rocket:
 
 ### Language flags
