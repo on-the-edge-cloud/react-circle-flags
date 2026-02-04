@@ -38,44 +38,41 @@ const parseLanguageCode = (languageCode) =>
  */
 class SvgInline extends React.Component {
   constructor(props) {
-    super(props);
-    this.ref = React.createRef();
+    super(props)
+    this.ref = React.createRef()
   }
 
   componentDidMount() {
-    this.loadSvg();
-    console.log(this.ref.current);
+    this.loadSvg()
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.src !== this.props.src) {
-      this.loadSvg();
+      this.loadSvg()
     }
-    debugger;
-    console.log(this.ref.current);
   }
 
   loadSvg() {
     fetch(this.props.src)
-      .then(res => res.text())
-      .then(svgHTML => {
+      .then((res) => res.text())
+      .then((svgHTML) => {
         if (this.ref.current) {
-          const parser = new DOMParser();
-          const svgDoc = parser.parseFromString(svgHTML, 'image/svg+xml');
+          const parser = new DOMParser()
+          const svgDoc = parser.parseFromString(svgHTML, 'image/svg+xml')
           /** @type {SVGSVGElement} */
-          const svgElement = svgDoc.documentElement;
+          const svgElement = svgDoc.documentElement
           for (const prop in this.props) {
-            if (prop === 'src') continue;
-            svgElement.setAttribute(prop, this.props[prop]);
+            if (prop === 'src') continue
+            svgElement.setAttribute(prop, this.props[prop])
           }
 
-          this.ref.current.outerHTML = svgElement.outerHTML;
+          this.ref.current.outerHTML = svgElement.outerHTML
         }
-      });
+      })
   }
 
   render() {
-    return <img {...this.props} ref={this.ref} />;
+    return <img {...this.props} ref={this.ref} />
   }
 }
 
@@ -83,7 +80,7 @@ class SvgInline extends React.Component {
  * @param {import('../index').CircleFlagProps} param0
  */
 export const CircleFlag = ({ countryCode, cdnUrl, inline, ...otherProps }) => {
-  const Component = inline ? SvgInline : 'img';
+  const Component = inline ? SvgInline : 'img'
   return (
     <Component
       data-testid='circle-country-flag'
@@ -99,8 +96,13 @@ export const CircleFlag = ({ countryCode, cdnUrl, inline, ...otherProps }) => {
 /**
  * @param {import('../index').CircleFlagLanguage} param0
  */
-export const CircleFlagLanguage = ({ languageCode, cdnUrl, inline, ...otherProps }) => {
-  const Component = inline ? SvgInline : 'img';
+export const CircleFlagLanguage = ({
+  languageCode,
+  cdnUrl,
+  inline,
+  ...otherProps
+}) => {
+  const Component = inline ? SvgInline : 'img'
   return (
     <Component
       data-testid='circle-language-flag'

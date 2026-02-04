@@ -1,6 +1,7 @@
 build/
 dist/
 node_modules/
+docs/node_modules/
 .snapshots/
 *.min.js
 coverage/

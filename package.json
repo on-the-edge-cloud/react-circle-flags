@@ -67,5 +67,8 @@
     "flags",
     "countries",
     "react-component-library"
-  ]
+  ],
+  "volta": {
+    "node": "18.20.8"
+  }
 }
