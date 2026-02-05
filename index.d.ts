@@ -12,6 +12,10 @@ interface CircleFlagProps extends DetailedHTMLProps<
    * Custom CDN URL to use.
    */
   cdnUrl?: string
+  /**
+   * Whether to use inline SVG rendering.
+   */
+  inline?: boolean
 }
 
 interface CircleFlagLanguageProps extends DetailedHTMLProps<
@@ -26,6 +30,10 @@ interface CircleFlagLanguageProps extends DetailedHTMLProps<
    * Custom CDN URL to use.
    */
   cdnUrl?: string
+  /**
+   * Whether to use inline SVG rendering.
+   */
+  inline?: boolean
 }
 
 /**
