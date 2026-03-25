@@ -14,46 +14,42 @@
   "engines": {
     "node": ">=10"
   },
+  "type": "module",
   "types": "dist/index.d.ts",
   "scripts": {
     "ci": "npm run lint && npm run build:test",
-    "build": "microbundle-crl --compress --no-sourcemap --format modern,cjs && shx cp index.d.ts dist/index.d.ts",
+    "build": "vite build && shx cp index.d.ts dist/index.d.ts",
     "build:test": "npm run build",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "start": "vite build --watch",
     "prepare": "npm run build",
-    "test": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
-    "test:watch": "react-scripts test --env=jsdom",
-    "lint": "eslint src/**/*.js docs/**/*.js"
+    "test": "CI=1 jest --env=jsdom --coverage",
+    "test:watch": "jest --env=jsdom",
+    "lint": "eslint"
   },
   "peerDependencies": {
     "react": "^16.0.0 || 17.x || 18.x || 19.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@testing-library/jest-dom": "^5.11.2",
-    "@testing-library/react": "^10.4.7",
-    "@testing-library/user-event": "^12.0.17",
-    "@types/jest": "^26.0.7",
-    "babel-eslint": "^10.0.3",
-    "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-config-standard-react": "^9.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "eslint-plugin-standard": "^4.0.1",
-    "microbundle-crl": "^0.13.10",
-    "prettier": "^2.0.4",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "@eslint/js": "^9.39.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "babel-jest": "^30.3.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "prettier": "^3.8.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^5.0.1",
-    "request": "^2.88.2",
-    "shx": "^0.3.2"
+    "shx": "^0.3.4",
+    "vite": "^8.0.1"
   },
   "files": [
     "dist"
@@ -72,6 +68,9 @@
     "react-component-library"
   ],
   "volta": {
-    "node": "18.20.8"
+    "node": "24.14.1"
+  },
+  "dependencies": {
+    "eslint-plugin-testing-library": "^7.16.2"
   }
 }
