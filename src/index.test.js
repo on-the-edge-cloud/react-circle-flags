@@ -4,8 +4,8 @@ import { CircleFlag, CircleFlagLanguage } from '.'
 
 describe('CircleFlag', () => {
   it('should render correctly with defaults', () => {
-    const { getByTestId } = render(<CircleFlag />)
-    const countryFlag = getByTestId('circle-country-flag')
+    const screen = render(<CircleFlag />)
+    const countryFlag = screen.getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
       'https://react-circle-flags.pages.dev/xx.svg'
@@ -15,10 +15,10 @@ describe('CircleFlag', () => {
   })
 
   it('should render correctly with props', () => {
-    const { getByTestId } = render(
+    const screen = render(
       <CircleFlag countryCode='ar' height='35' title='Argentina' />
     )
-    const countryFlag = getByTestId('circle-country-flag')
+    const countryFlag = screen.getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
       'https://react-circle-flags.pages.dev/ar.svg'
@@ -28,7 +28,7 @@ describe('CircleFlag', () => {
   })
 
   it('should render correctly with cdnUrl parameter', () => {
-    const { getByTestId } = render(
+    const screen = render(
       <CircleFlag
         countryCode='ar'
         height='35'
@@ -36,7 +36,7 @@ describe('CircleFlag', () => {
         cdnUrl='https://magic-cdn.com/flags/'
       />
     )
-    const countryFlag = getByTestId('circle-country-flag')
+    const countryFlag = screen.getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
       'https://magic-cdn.com/flags/ar.svg'
@@ -44,10 +44,10 @@ describe('CircleFlag', () => {
   })
 
   it('should render UNKNOWN_FLAG if the countryCode is not in countries', () => {
-    const { getByTestId } = render(
+    const screen = render(
       <CircleFlag countryCode='Argentina' height='35' />
     )
-    const countryFlag = getByTestId('circle-country-flag')
+    const countryFlag = screen.getByTestId('circle-country-flag')
     expect(countryFlag).toBeInTheDocument()
     expect(countryFlag.getAttribute('src')).toBe(
       'https://react-circle-flags.pages.dev/xx.svg'
@@ -59,8 +59,8 @@ describe('CircleFlag', () => {
 
 describe('CircleFlagLanguage', () => {
   it('should render correctly with defaults', () => {
-    const { getByTestId } = render(<CircleFlagLanguage />)
-    const languageFlag = getByTestId('circle-language-flag')
+    const screen = render(<CircleFlagLanguage />)
+    const languageFlag = screen.getByTestId('circle-language-flag')
     expect(languageFlag).toBeInTheDocument()
     expect(languageFlag.getAttribute('src')).toBe(
       'https://react-circle-flags.pages.dev/language/xx.svg'
@@ -70,14 +70,14 @@ describe('CircleFlagLanguage', () => {
   })
 
   it('should render correctly with props', () => {
-    const { getByTestId } = render(
+    const screen = render(
       <CircleFlagLanguage
         languageCode='en-us'
         height='35'
         title='United States'
       />
     )
-    const languageFlag = getByTestId('circle-language-flag')
+    const languageFlag = screen.getByTestId('circle-language-flag')
     expect(languageFlag).toBeInTheDocument()
     expect(languageFlag.getAttribute('src')).toBe(
       'https://react-circle-flags.pages.dev/language/en-us.svg'
