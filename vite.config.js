@@ -1,5 +1,5 @@
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { defineConfig, esmExternalRequirePlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
@@ -11,15 +11,20 @@ export default defineConfig({
       name: 'ReactCircleFlags',
       // the proper extensions will be added
       fileName: 'index',
-      formats: ['es', 'cjs']
+      formats: ['es', 'umd']
     },
     rolldownOptions: {
-      external: ['react', 'react-dom'],
+      plugins: [
+        esmExternalRequirePlugin({
+          external: [/^react(-dom)?(\/.+)?$/],
+        }),
+      ],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
-        }
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'react_jsx_runtime',
+        },
       }
     },
   },

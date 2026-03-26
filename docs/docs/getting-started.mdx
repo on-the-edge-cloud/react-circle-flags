@@ -1,0 +1,45 @@
+---
+slug: /
+sidebar_position: 1
+title: Getting Started
+---
+
+import { CircleFlag } from 'react-circle-flags';
+
+# react-circle-flags
+
+A React component with a collection of 300+ minimal circular SVG country flags.
+
+## Install
+
+```bash
+npm install --save react-circle-flags
+```
+
+## Basic usage
+
+```jsx live
+function FlagExample() {
+  return <CircleFlag countryCode="ar" height="100" />;
+}
+```
+
+You can pass all the React `React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>` props to CircleFlag.
+
+## With custom CDN
+
+```jsx
+import { CircleFlag } from 'react-circle-flags'
+
+export const ArgentinianFlag = () => (
+  <CircleFlag countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
+)
+```
+
+## Language flags
+
+```jsx live
+function LanguageFlagExample() {
+  return <CircleFlagLanguage languageCode="en-us" height="100" />;
+}
+```
