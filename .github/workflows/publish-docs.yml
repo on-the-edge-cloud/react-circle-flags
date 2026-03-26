@@ -18,15 +18,16 @@ jobs:
       uses: actions/setup-node@v6
       with:
         node-version: 24
-    - run: npm i
-    - run: npm run build
-    - run: npm i
+    - name: Install dependencies
+      run: npm i
+    - name: Build package
+      run: npm run build
+    - name: Install docs dependencies
+      run: npm i
       working-directory: ./docs
-    - run: npm run build
+    - name: Build docs
+      run: npm run build
       working-directory: ./docs
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        token: ${{ secrets.GH_TOKEN }}
-        branch: gh-pages
-        folder: docs/build
+    - name: Deploy docs
+      run: npm run deploy
+      working-directory: ./docs
