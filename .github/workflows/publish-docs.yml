@@ -3,6 +3,9 @@
 
 name: Publish docs
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ master ]
