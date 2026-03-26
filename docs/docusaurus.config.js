@@ -50,7 +50,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/on-the-edge-cloud/react-circle-flags/tree/master/documentation/',
+            'https://github.com/on-the-edge-cloud/react-circle-flags/tree/master/docs/',
         },
         blog: false,
         theme: {
