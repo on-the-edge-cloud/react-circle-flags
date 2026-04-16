@@ -67,7 +67,9 @@ class SvgInline extends React.Component {
             svgElement.setAttribute(prop, this.props[prop])
           }
 
-          this.ref.current.outerHTML = svgElement.outerHTML
+          if (this.ref.current) {
+            this.ref.current.outerHTML = svgElement.outerHTML
+          }
         }
       })
   }
