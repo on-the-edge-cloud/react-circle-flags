@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import countries from './countries'
 import languages from './languages'

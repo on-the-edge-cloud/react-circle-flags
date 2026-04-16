@@ -1,6 +1,6 @@
 {
   "name": "react-circle-flags",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "A React component with a collection of 300+ minimal circular SVG country flags",
   "author": "Tomás Novau(tnovau@ontheedge.cloud)",
   "license": "MIT",
@@ -8,9 +8,16 @@
     "type": "git",
     "url": "git+https://github.com/on-the-edge-cloud/react-circle-flags.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.js",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
+  "source": "src/index.jsx",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "default": "./dist/index.js"
+    }
+  },
   "engines": {
     "node": ">=10"
   },
@@ -68,7 +75,7 @@
     "react-component-library"
   ],
   "volta": {
-    "node": "24.14.1"
+    "node": "24.15.0"
   },
   "dependencies": {
     "eslint-plugin-testing-library": "^7.16.2"
