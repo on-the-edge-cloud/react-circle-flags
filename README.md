@@ -34,7 +34,7 @@ export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" cd
 import React from 'react'
 import { CircleFlag } from 'react-circle-flags'
 
-export const ArgentinianFlag = () => <CircleFlag countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
+export const ArgentinianFlag = () => <CircleFlag inline countryCode="ar" height="35" cdnUrl="https://magic-cdn.com/flags/" />
 ```
 
 You can pass all the react's `React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>` props to CircleFlag. :rocket:
